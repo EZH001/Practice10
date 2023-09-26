@@ -15,33 +15,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun Click(view: View){
-        val button1 = findViewById<Button>(R.id.button1)
-        val button2 = findViewById<Button>(R.id.button2)
-        val button3 = findViewById<Button>(R.id.button3)
-        val button4 = findViewById<Button>(R.id.button4)
-        val button5 = findViewById<Button>(R.id.button5)
-        val button6 = findViewById<Button>(R.id.button6)
+        val btn = view as Button
         var text1 = findViewById<TextView>(R.id.textView2)
         var text2 = findViewById<TextView>(R.id.textView4)
-        button1.setOnClickListener { text1.text = "Вертикальная" }
-        button2.setOnClickListener { text2.text = "По левой границе" }
-        button3.setOnClickListener { text1.text = "Горизонтальная" }
-        button4.setOnClickListener { text2.text = "По центру" }
-        button5.setOnClickListener { text1.text = "Вертикальная" }
-        button6.setOnClickListener { text2.text = "По правой границе" }
+        when (btn.id){
+            R.id.button1 -> text1.text = "Вертикальная"
+            R.id.button2 -> text2.text = "По левой границе"
+            R.id.button3 -> text1.text = "Горизонтальная"
+            R.id.button4 -> text2.text = "По центру"
+            R.id.button5 -> text1.text = "Вертикальная"
+            R.id.button6 -> text2.text = "По правой границе"
+        }
     }
     /*var status: Boolean = true
     fun Click(view: View){
-        val button1 = findViewById<Button>(R.id.button1)
-        val button2 = findViewById<Button>(R.id.button2)
+        val btn: Button = findViewById(R.id.button1)
+        val btn2: Button = findViewById(R.id.button2)
         if (status == true) {
-            button1.visibility = View.INVISIBLE
-            button2.visibility = View.VISIBLE
+            btn.visibility = View.INVISIBLE
+            btn2.visibility = View.VISIBLE
             status = false
         }
         else {
-            button1.visibility = View.VISIBLE
-            button2.visibility = View.INVISIBLE
+            btn.visibility = View.VISIBLE
+            btn2.visibility = View.INVISIBLE
             status = true
         }
     }*/

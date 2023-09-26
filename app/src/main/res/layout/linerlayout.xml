@@ -67,6 +67,7 @@
                 android:id="@+id/button5"
                 android:layout_width="204dp"
                 android:layout_height="wrap_content"
+                android:onClick="Click"
                 android:text="Orient" />
 
             <Button
